@@ -1,2 +1,19 @@
-@import './common';
-@import './example';
+// utils
+@import './utils/vars';
+@import './utils/reset';
+@import './utils/visually-hidden';
+@import './utils/mixin';
+
+// base
+@import './base/commond';
+@import './base/container';
+
+// loyaut
+@import './loyaut/header-hero';
+@import './loyaut/products';
+@import './loyaut/about';
+@import './loyaut/advantages';
+@import './loyaut/gallery';
+@import './loyaut/customer-reviews';
+@import './loyaut/contacts';
+@import './loyaut/footer';
