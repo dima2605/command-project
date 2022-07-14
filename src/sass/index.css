@@ -1,0 +1,90 @@
+:root {
+  --accent-color: #d41443;
+  --second-accent-color: #ffa5ba;
+  --white-color: #ffffff;
+  --white-background-color: #ffffff;
+  --milk-background-color: #fff5f6;
+  --pink-background-color: #ffb8ca;
+  --brown-background-color: #f0d1a5;
+  --green-background-color: #c2e297;
+  --modal-background-color: #e17992;
+  --white-text-color: #ffffff;
+  --black-text-color: #000000;
+  --grey-text-color: #907e82;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.visually__hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+body {
+  font-family: "DM+Sans", sans-serif;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+@media screen and (min-width: 320px) {
+  .container {
+    width: 320px;
+    padding: 0 20px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+    padding: 0 32px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+    padding: 0 16px;
+  }
+}
+
+.header__con {
+  background-color: #ffb8ca;
+  width: 100%;
+}
+
+.header__nav {
+  min-width: 320px;
+  height: 85px;
+}/*# sourceMappingURL=index.css.map */
