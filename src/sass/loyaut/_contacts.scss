@@ -1,0 +1,219 @@
+.contacts {
+  background-image: linear-gradient(
+    180deg,
+    var(--white-background-color) 300px,
+    var(--milk-background-color) 0
+  );
+  background-color: var(--milk-background-color);
+  font-weight: 500;
+  font-size: 12px;
+  @include tablet {
+    background-image: linear-gradient(
+      180deg,
+      var(--white-background-color) 290px,
+      var(--milk-background-color) 0
+    );
+  }
+  @include desktop {
+    background-image: linear-gradient(
+      180deg,
+      var(--white-background-color) 85px,
+      var(--milk-background-color) 0
+    );
+  }
+}
+
+.contacts-list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: calc(33.3333% - 20px);
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 32px;
+  @include tablet {
+    flex-wrap: nowrap;
+    margin-bottom: 60px;
+  }
+  @include desktop {
+    flex-wrap: nowrap;
+    margin-bottom: 60px;
+  }
+}
+.contacts-list__box:not(:last-child) {
+  margin-bottom: 20px;
+  @include tablet {
+    margin-bottom: 0;
+    margin-right: 32px;
+  }
+  @include desktop {
+    margin-bottom: 0;
+    margin-right: 32px;
+  }
+}
+.contacts-list__box {
+  background: var(--white-background-color);
+  width: 280px;
+  height: 412px;
+  box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+  border-radius: 24px;
+  padding: 40px 69px 40px 32px;
+  @include tablet {
+    width: 224px;
+    height: 528px;
+    padding: 40px 32px;
+  }
+  @include desktop {
+    width: 368px;
+    height: 538px;
+    padding: 40px;
+  }
+}
+.contacts-list__item,
+.contacts-list__item-green {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 16px;
+  border-radius: 4px;
+  font-size: 12px;
+  line-height: 1.84;
+  color: var(--white-background-color);
+  margin-bottom: 20px;
+  @include tablet {
+    height: 28px;
+    font-size: 16px;
+    line-height: 1.88;
+  }
+  @include desktop {
+    height: 28px;
+    font-size: 16px;
+    line-height: 1.88;
+  }
+}
+.contacts-list__item {
+  width: 80px;
+  background-color: var(--brown-background-color);
+  @include tablet {
+    width: 73px;
+  }
+  @include desktop {
+    width: 73px;
+  }
+}
+.contacts-list__item-green {
+  width: 130px;
+  background-color: var(--green-background-color);
+  @include tablet {
+    height: 28px;
+    width: 138px;
+    font-size: 16px;
+    line-height: 1.88;
+  }
+  @include desktop {
+    height: 28px;
+    width: 138px;
+    font-size: 16px;
+    line-height: 1.88;
+  }
+}
+.contacts-list__city {
+  font-size: 12px;
+  line-height: 1.84;
+  color: var(--black-text-color);
+  margin-bottom: 8px;
+  @include tablet {
+    font-size: 14px;
+    line-height: 1.86;
+    margin-bottom: 12px;
+  }
+  @include desktop {
+    font-size: 16px;
+    line-height: 1.86;
+    margin-bottom: 8px;
+  }
+}
+.contacts-list__descp {
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--grey-text-color);
+  margin-bottom: 24px;
+  @include tablet {
+    font-size: 14px;
+    line-height: 1.64;
+    margin-bottom: 32px;
+  }
+  @include desktop {
+    font-size: 16px;
+    line-height: 1.81;
+    margin-bottom: 32px;
+    letter-spacing: 0.04em;
+  }
+}
+.schedule {
+  border-top: 1px solid #e1e1e1;
+  border-bottom: 1px solid #e1e1e1;
+  padding: 24px 0;
+  @include tablet {
+    padding: 32px 0;
+  }
+  @include desktop {
+    padding: 32px 0;
+  }
+}
+.schedule__day {
+  font-size: 12px;
+  line-height: 1.83;
+  color: var(--black-text-color);
+  @include tablet {
+    font-size: 14px;
+    line-height: 1.86;
+  }
+  @include desktop {
+    font-size: 16px;
+    line-height: 1.88;
+  }
+}
+.schedule__time {
+  font-size: 12px;
+  line-height: 1.83;
+  color: var(--second-accent-color);
+  @include tablet {
+    font-size: 14px;
+    line-height: 1.86;
+  }
+  @include desktop {
+    font-size: 16px;
+    line-height: 1.88;
+  }
+}
+.time-work {
+  margin-bottom: 8px;
+  @include tablet {
+    margin-bottom: 12px;
+  }
+  @include desktop {
+    margin-bottom: 12px;
+  }
+}
+.contacts-link {
+  margin-top: 24px;
+  @include tablet {
+    margin-top: 32px;
+  }
+  @include desktop {
+    margin-top: 32px;
+  }
+}
+.contacts-link__path {
+  font-size: 12px;
+  line-height: 1.5;
+  color: inherit;
+  @include tablet {
+    font-size: 14px;
+    line-height: 1.85;
+  }
+  @include desktop {
+    font-size: 16px;
+    line-height: 1.82;
+  }
+}
