@@ -1,0 +1,18 @@
+.advantages {
+    width: 100%;
+    padding-top: 40px;
+    padding-bottom: 60px;
+    background-color: var(--milk-background-color);
+}
+
+.advantages__top-text {
+    font-family: 'Titan One';
+    @include font (400, 36px, 1.13, 0.04em);
+    text-transform: uppercase;
+    color: var(--accent-color)
+}
+
+.advantages__text {
+    @include font (700, 12px, 1.66, null);
+    color: var(--black-text-color);
+}
