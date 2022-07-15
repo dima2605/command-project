@@ -176,19 +176,93 @@ body {
   color: #d41443;
 }
 
-img {
+.gallery img {
   width: auto;
+  display: block;
 }
 
 .gallery {
-  background-image: linear-gradient(to bottom, var(--milk-background-color) 20%, #ffffff 20%);
-  width: 100%;
+  background-image: linear-gradient(to bottom, var(--milk-background-color) 20%, var(--white-background-color) 20%, var(--white-background-color) 80%);
+  height: 136px;
 }
-
+@media screen and (min-width: 768px) {
+  .gallery {
+    background-image: linear-gradient(to bottom, var(--milk-background-color) 57%, var(--white-background-color) 57%, var(--white-background-color) 43%);
+    height: 327px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .gallery {
+    background-image: linear-gradient(to bottom, var(--milk-background-color) 20%, var(--white-background-color) 20%, var(--white-background-color) 80%);
+    height: 430px;
+  }
+}
 .gallery__list {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100vw;
-  height: 430px;
+  min-width: 320px;
+  min-height: 136px;
+}
+@media screen and (min-width: 768px) {
+  .gallery__list {
+    min-width: 768px;
+    min-height: 327px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .gallery__list {
+    min-width: 1013px;
+    min-height: 430px;
+  }
+}
+.gallery__wrap {
+  flex-direction: column;
+}
+.gallery__wrap + .gallery__wrap {
+  margin-left: 3px;
+}
+@media screen and (min-width: 768px) {
+  .gallery__wrap + .gallery__wrap {
+    margin-left: 6px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .gallery__wrap + .gallery__wrap {
+    margin-left: 8px;
+  }
+}
+
+.gallery__item + .gallery__item {
+  margin-top: 3px;
+}
+@media screen and (min-width: 768px) {
+  .gallery__item + .gallery__item {
+    margin-top: 6px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .gallery__item + .gallery__item {
+    margin-top: 8px;
+  }
+}
+
+.gallery__wrap--1 {
+  padding-top: 2%;
+}
+
+.gallery__wrap--3 {
+  padding-top: 5%;
+}
+
+.gallery__wrap--5 {
+  padding-top: 5%;
+}
+
+.img {
+  transition: 1s;
+}
+
+.img:hover {
+  transform: scale(1.2);
 }/*# sourceMappingURL=index.css.map */
