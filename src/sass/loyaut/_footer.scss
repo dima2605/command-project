@@ -68,10 +68,12 @@
 .footer__wrap-link {
     @include tablet {
         display: flex;
-        flex-wrap: wrap;
-        flex-basis: calc((100% - 64px)/2);
-        align-content: center;
-        justify-content: flex-end;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    @include desktop {
+        margin-top: 120px;
     }
 }
 
