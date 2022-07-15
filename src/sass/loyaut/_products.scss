@@ -8,8 +8,7 @@
 .products__label {
   margin-bottom: 15px;
 
-  font-size: 18px;
-  line-height: 1.7;
+  @include font(null, 18px, 1.7, null);
   text-align: center;
   text-transform: uppercase;
   color: var(--second-accent-color);
@@ -18,10 +17,8 @@
 .products__title {
   margin-bottom: 8px;
 
-  font-size: 34px;
-  line-height: 1.4;
+  @include font(null, 34px, 1.4, 0.04em);
   text-align: center;
-  letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--accent-color);
 }
@@ -37,6 +34,9 @@
 }
 
 .products-list__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   margin-top: 140px;
 
   text-align: center;
@@ -61,12 +61,13 @@
 
 .products-list__item::before {
   content: '';
-  display: block;
+  // display: block;
   width: 100%;
   height: 280px;
   position: absolute;
   top: -140px;
   background-repeat: no-repeat;
+  background-size: contain;
   @include tablet {
     top: -138px;
   }
@@ -114,10 +115,8 @@
 .products-list__title {
   margin-bottom: 70px;
 
-  text-align: center;
-  font-size: 20px;
+  @include font(null, 20px, 1.15, 0.04em);
   line-height: 1.15;
-  letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--white-background-color);
   position: relative;
@@ -142,10 +141,7 @@
   padding-right: 40px;
 
   font-family: 'DM Sans';
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.52;
-  letter-spacing: 0.04em;
+  @include font(700, 14px, 1.52, 0.04em);
   text-align: center;
   color: var(--white-background-color);
 }
