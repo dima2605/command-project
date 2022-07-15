@@ -1,9 +1,11 @@
+// ------------------------------Products-------------------------------------------
 .products {
   padding-top: 60px;
   padding-bottom: 60px;
 
   font-family: 'Titan One';
 }
+
 .products__container {
   width: 100%;
 }
@@ -15,6 +17,11 @@
   text-align: center;
   text-transform: uppercase;
   color: var(--second-accent-color);
+
+  @include tablet {
+    margin-bottom: 18px;
+    @include font(null, 26px, 1.15, null);
+  }
 }
 
 .products__title {
@@ -24,13 +31,20 @@
   text-align: center;
   text-transform: uppercase;
   color: var(--accent-color);
+
+  @include tablet {
+    margin-bottom: 20px;
+    @include font(null, 48px, 1.4, 0.04em);
+  }
 }
 
 .products-list {
   display: flex;
+
   @media screen and (max-width: 767px) {
     flex-direction: column;
   }
+
   @include tablet {
     gap: 16px;
   }
@@ -46,6 +60,10 @@
   padding-bottom: 40px;
   border-radius: 24px;
   position: relative;
+
+  @include tablet {
+    padding-top: 118px;
+  }
 }
 
 .products-list__item--pink {
@@ -69,7 +87,10 @@
   top: -140px;
   background-repeat: no-repeat;
   background-size: contain;
+
   @include tablet {
+    width: 224px;
+    height: 224px;
     top: -138px;
   }
 }
@@ -79,6 +100,7 @@
   @include retina {
     background-image: url(../images/products-icon1-mob-2x.png);
   }
+
   @include tablet {
     background-image: url(../images/products-icon1-tab.png);
     @include retina {
@@ -92,6 +114,7 @@
   @include retina {
     background-image: url(../images/products-icon2-mob-2x.png);
   }
+
   @include tablet {
     background-image: url(../images/products-icon2-tab.png);
     @include retina {
@@ -105,6 +128,7 @@
   @include retina {
     background-image: url(../images/products-icon3-mob-2x.png);
   }
+
   @include tablet {
     background-image: url(../images/products-icon3-tab.png);
     @include retina {
@@ -133,6 +157,16 @@
   bottom: -38px;
   left: 50%;
   transform: translateX(-50%);
+  @include retina {
+    background-image: url(../images/ellips-mob-2x.png);
+  }
+
+  @include tablet {
+    background-image: url(../images/ellips-tab.png);
+    @include retina {
+      background-image: url(../images/ellips-tab-2x.png);
+    }
+  }
 }
 
 .products-list__text {
@@ -144,6 +178,11 @@
   @include font(700, 14px, 1.52, 0.04em);
   text-align: center;
   color: var(--white-background-color);
+
+  @include tablet {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
 }
 
 .products-btn {
