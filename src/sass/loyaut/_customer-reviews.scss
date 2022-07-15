@@ -1,0 +1,242 @@
+.reviews__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.reviews__img {
+  width: 85px;
+  height: 85px;
+  margin-bottom: 32px;
+}
+
+.reviews__text {
+    background-color: var(--review-background-color);
+
+    @include mobile {
+        width: 280px;
+        height: 308px;
+        margin-bottom: 36px;
+      }
+    
+      @include tablet {
+        width: 620px;
+        height: 164px;
+        margin-bottom: 24px;
+      }
+    
+      @include desktop {
+        width: 968px;
+        height: 138px;
+        margin-bottom: 36px;
+      }
+}
+
+.linear-gradient {
+    position: relative;
+    margin: 0 auto;
+
+    &::before {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        width: 54px;
+        height: 40px;
+        background-image: url('../images/quotation.png');
+      }
+
+  @include mobile {
+    padding: 74px 50px 17px 50px;
+    width: 180px;
+    background-image: repeating-linear-gradient(
+      to bottom,
+      var(--linear-gradient-color),
+      var(--linear-gradient-color) 1px,
+      var(--review-background-color) 1px,
+      var(--review-background-color) 31px,
+      var(--linear-gradient-color) 31px,
+      var(--linear-gradient-color) 32px,
+      var(--review-background-color) 32px,
+      var(--review-background-color) 62px,
+      var(--linear-gradient-color) 62px,
+      var(--linear-gradient-color) 63px,
+      var(--review-background-color) 63px,
+      var(--review-background-color) 93px,
+      var(--linear-gradient-color) 93px,
+      var(--linear-gradient-color) 94px,
+      var(--review-background-color) 94px,
+      var(--review-background-color) 124px,
+      var(--linear-gradient-color) 124px,
+      var(--linear-gradient-color) 125px,
+      var(--review-background-color) 125px,
+      var(--review-background-color) 155px,
+      var(--linear-gradient-color) 155px,
+      var(--linear-gradient-color) 156px,
+      var(--review-background-color) 156px,
+      var(--review-background-color) 186px,
+      var(--linear-gradient-color) 186px,
+      var(--linear-gradient-color) 187px,
+      var(--review-background-color) 187px,
+      var(--review-background-color) 217px,
+      var(--linear-gradient-color) 217px
+      var(--linear-gradient-color) 218px
+    );
+  }
+
+  @include tablet {
+    padding: 20px 6px 36px 6px;
+    width: 608px;
+    background-image: repeating-linear-gradient(
+      to bottom,
+      var(--review-background-color),
+      var(--review-background-color) 30px,
+      var(--linear-gradient-color) 30px,
+      var(--linear-gradient-color) 31px,
+      var(--review-background-color) 31px,
+      var(--review-background-color) 61px,
+      var(--linear-gradient-color) 61px,
+      var(--linear-gradient-color) 62px,
+      var(--review-background-color) 62px,
+      var(--review-background-color) 92px,
+      var(--linear-gradient-color) 92px,
+      var(--linear-gradient-color) 93px
+    );
+  }
+
+  @include desktop {
+    padding: 32px 73px;
+    width: 822px;
+    background-image: repeating-linear-gradient(
+      to bottom,
+      var(--review-background-color),
+      var(--review-background-color) 31px,
+      var(--linear-gradient-color) 31px,
+      var(--linear-gradient-color) 32px,
+      var(--review-background-color) 32px,
+      var(--review-background-color) 63px,
+      var(--linear-gradient-color) 63px,
+      var(--linear-gradient-color) 64px
+    );
+  }
+}
+
+.customer__text {
+  text-align: center;
+  color: var(--black-text-color);
+
+  @include mobile {
+    @include font(500, 12px, 2.55, 0.04em);
+    width: 157px;
+  }
+
+  @include tablet {
+    @include font(500, 14px, 2.16, 0.04em);
+    width: 515px;
+  }
+
+  @include desktop {
+    @include font(500, 16px, 1.86, 0.04em);
+    width: 750px;
+  }
+}
+
+.customer__name {
+    position: relative;
+  display: flex;
+  justify-content: center;
+  color: var(--black-text-color);
+
+  &::before {
+    position: absolute;
+    top: -16px;
+    justify-content: center;
+    content: '';
+    width: 32px;
+    height: 4px;
+    background-image: url('../images/ellipsis.png');
+  }
+
+  @include mobile {
+    @include font(500, 14px, 1.86, 0.04em);
+    width: 172px;
+  }
+
+  @include tablet {
+    @include font(500, 16px, 1.86, 0.04em);
+    width: 515px;
+  }
+
+  @include desktop {
+    @include font(500, 20px, 1.86, 0.04em);
+    width: 750px;
+  }
+}
+
+.my-dots {
+    position: absolute;
+    bottom: -45px;
+    display: block;
+    width: 100%;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+  }
+  
+  .my-dots li {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    padding: 0;
+    cursor: pointer;
+  }
+  
+  .my-dots li button {
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    cursor: pointer;
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: transparent;
+  }
+  
+  .my-dots li button:hover,
+  .my-dots li button:focus {
+    outline: none;
+  }
+  
+  .my-dots li button:hover:before,
+  .my-dots li button:focus:before {
+    opacity: 1;
+  }
+  
+  .my-dots li button:before {
+    font-family: 'slick';
+    font-size: 6px;
+    line-height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    content: url('https://upload.wikimedia.org/wikipedia/commons/b/b7/Rule_Segment_-_Circle_open_-_20px.svg');
+    text-align: center;
+    opacity: .25;
+    color: black;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+     
+  }
+  
+  .my-dots li.slick-active button:before {
+    opacity: .75;
+    color: black;
+  }
+  
