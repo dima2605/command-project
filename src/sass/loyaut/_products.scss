@@ -64,11 +64,13 @@
   @include tablet {
     padding-top: 118px;
   }
+  @include desktop {
+    margin-top: 261px;
+  }
 }
 
 .products-list__item--pink {
   background: var(--pink-background-color);
-  margin-top: 140px;
 }
 
 .products-list__item--brown {
@@ -192,6 +194,20 @@
   border: none;
   border-radius: 50%;
   background-color: var(--white-background-color);
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.products-btn::before {
+  width: 280px;
+  height: 280px;
+  background-color: blueviolet;
+
+  transition: background-color;
+}
+
+.products-btn:hover::before {
+  background-color: chartreuse;
 }
 
 .products-btn__icon {
