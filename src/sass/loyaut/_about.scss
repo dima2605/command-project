@@ -78,9 +78,6 @@
     display: flex;
     flex-wrap: wrap;
 
-    @include mobile {
-            display: none;
-    }
 
     @include tablet {
             display: flex;
@@ -99,24 +96,49 @@
     //background-repeat: no-repeat;
    // background-position: center;
 
-    width: 220px;
+    
+    // margin-left: 0px;
+    // padding-top: 0px;
+    // padding-bottom: 0px;
+    
+        @include mobile {
+                background-image: url(../images/milk-mob.png);
+                background-repeat: no-repeat;
+                background-position: center;
+                width: 100%;
+            }
+
+
+        @include tablet {
+         background-image: none;
+        }
+    
+        // @include desktop {
+        //     margin-left: 99px;
+        //     padding-top: 90px;
+        //     padding-bottom: 81px;
+        // }
+}
+
+.about-common {
     margin-left: 0px;
     padding-top: 0px;
     padding-bottom: 0px;
+    width: 100%;
 
-
-    
-        @include tablet {
-            width: 334px;
+    @include tablet {
             margin-left: 32px;
+            background-image: none;
+            width: auto;
         }
     
         @include desktop {
-            width: 463px;
             margin-left: 99px;
             padding-top: 90px;
             padding-bottom: 81px;
+            width: auto;
         }
+     
 }
 
 .about-content__top-text {
@@ -125,17 +147,20 @@
     font-size: 12px;
     line-height: 1.62;
     color: var(--black-text-color);
+    width: 220px;
 
     margin-bottom: 35px;
 
     @include tablet {
             font-size: 14px;
             line-height: 1.76;
+            width: 334px;
         }
     
     @include desktop {
             font-size: 16px;
             letter-spacing: 0.04em;
+            width: 463px;
         }
 }
 
@@ -148,16 +173,22 @@
     
     margin-bottom: 15px;
 
+    width: 220px;
+
     @include tablet {
             font-size: 14px;
             line-height: 1.76;
             letter-spacing: 0.04em;
+            width: 334px;
+            margin-bottom: 40px;
         }
     
     @include desktop {
             font-size: 14px;
             line-height: 1.94;
             letter-spacing: 0.04em; 
+            width: 463px;
+            margin-bottom: 44px;
         }
 
 }
@@ -186,15 +217,21 @@
         }
 }
 
-.about-content__btn:hover,
-.about-content__btn:focus {
+.about-content__btn:focus,
+.about-content__btn:hover {
    background: var(--accent-color);
    color: var(--white-color);
+   fill: var(--white-color);
 }
 
 .vector {
    display: flex;
    align-items: baseline;
    margin-left: 14px;
-   border: 2px solid #D41443;
+   fill: currentColor;
+}
+
+.vector:hover,
+.vector:focus {
+    fill: var(--white-color);
 }
