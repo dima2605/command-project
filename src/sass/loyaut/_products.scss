@@ -1,0 +1,262 @@
+.products {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  font-family: 'Titan One', cursive;
+}
+
+.products__container {
+  width: 100%;
+}
+
+.products__label {
+  margin-bottom: 15px;
+
+  @include font(null, 18px, 1.7, null);
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--second-accent-color);
+
+  @include tablet {
+    margin-bottom: 18px;
+    @include font(null, 26px, 1.15, null);
+  }
+
+  @include desktop {
+    margin-bottom: 16px;
+    @include font(null, 30px, 1.13, null);
+  }
+}
+
+.products__title {
+  margin-bottom: 8px;
+
+  @include font(null, 34px, 1.4, 0.04em);
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--accent-color);
+
+  @include tablet {
+    margin-bottom: 20px;
+    @include font(null, 48px, 1.4, 0.04em);
+  }
+
+  @include desktop {
+    @include font(null, 56px, 1.17, 0.06em);
+  }
+}
+
+.products-list {
+  display: flex;
+
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+  }
+
+  @include tablet {
+    gap: 16px;
+  }
+
+  @include desktop {
+    gap: 32px;
+  }
+}
+
+.products-list__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 140px;
+  padding-top: 160px;
+  padding-bottom: 40px;
+  border-radius: 24px;
+  position: relative;
+
+  @include tablet {
+    padding-top: 118px;
+  }
+
+  @include desktop {
+    padding-top: 165px;
+    padding-bottom: 60px;
+    margin-top: 261px;
+  }
+}
+
+.products-list__item--pink {
+  background: var(--pink-background-color);
+}
+
+.products-list__item--brown {
+  background: var(--brown-background-color);
+}
+
+.products-list__item--green {
+  background: var(--green-background-color);
+}
+
+.products-list__item::before {
+  content: '';
+  width: 280px;
+  height: 280px;
+  position: absolute;
+  top: -140px;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  @include tablet {
+    width: 224px;
+    height: 224px;
+    top: -138px;
+  }
+
+  @include desktop {
+    width: 368px;
+    height: 394px;
+    top: -261px;
+  }
+}
+
+.icon--pink::before {
+  background-image: url(../images/products-icon1-mob.png);
+  @include retina {
+    background-image: url(../images/products-icon1-mob-2x.png);
+  }
+
+  @include tablet {
+    background-image: url(../images/products-icon1-tab.png);
+    @include retina {
+      background-image: url(../images/products-icon1-tab-2x.png);
+    }
+  }
+
+  @include desktop {
+    background-image: url(../images/products-icon1-desc.png);
+    @include retina {
+      background-image: url(../images/products-icon1-desc-2x.png);
+    }
+  }
+}
+
+.icon--brown::before {
+  background-image: url(../images/products-icon2-mob.png);
+  @include retina {
+    background-image: url(../images/products-icon2-mob-2x.png);
+  }
+
+  @include tablet {
+    background-image: url(../images/products-icon2-tab.png);
+    @include retina {
+      background-image: url(../images/products-icon2-tab-2x.png);
+    }
+  }
+
+  @include desktop {
+    background-image: url(../images/products-icon2-desc.png);
+    @include retina {
+      background-image: url(../images/products-icon2-desc-2x.png);
+    }
+  }
+}
+
+.icon--green::before {
+  background-image: url(../images/products-icon3-mob.png);
+  @include retina {
+    background-image: url(../images/products-icon3-mob-2x.png);
+  }
+
+  @include tablet {
+    background-image: url(../images/products-icon3-tab.png);
+    @include retina {
+      background-image: url(../images/products-icon3-tab-2x.png);
+    }
+  }
+
+  @include desktop {
+    background-image: url(../images/products-icon3-desc.png);
+    @include retina {
+      background-image: url(../images/products-icon3-desc-2x.png);
+    }
+  }
+}
+
+.products-list__title {
+  margin-bottom: 70px;
+
+  @include font(null, 20px, 1.15, 0.04em);
+  text-transform: uppercase;
+  color: var(--white-background-color);
+  position: relative;
+
+  @include desktop {
+    @include font(null, 30px, 1.13, 0.04em);
+  }
+}
+
+.products-list__title::after {
+  content: '';
+  display: block;
+  width: 26px;
+  height: 6px;
+  background-image: url(../images/ellips-mob.png);
+  position: absolute;
+  bottom: -38px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-size: contain;
+  @include retina {
+    background-image: url(../images/ellips-mob-2x.png);
+  }
+
+  @include tablet {
+    background-image: url(../images/ellips-tab.png);
+    @include retina {
+      background-image: url(../images/ellips-tab-2x.png);
+    }
+  }
+
+  @include desktop {
+    background-image: url(../images/ellips-desc.png);
+    @include retina {
+      background-image: url(../images/ellips-desc-2x.png);
+    }
+  }
+}
+
+.products-list__text {
+  margin-bottom: 32px;
+  padding-left: 40px;
+  padding-right: 40px;
+
+  font-family: 'DM Sans', sans-serif;
+  @include font(700, 14px, 1.52, 0.04em);
+  text-align: center;
+  color: var(--white-background-color);
+
+  @include tablet {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  @include desktop {
+    padding-left: 63px;
+    padding-right: 63px;
+    margin-bottom: 60px;
+    @include font(700, 16px, 1.76, 0.04em);
+  }
+}
+
+.products-btn {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--white-background-color);
+}
+
+.products-btn__icon {
+  width: 10px;
+  height: 10px;
+}

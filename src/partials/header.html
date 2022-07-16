@@ -1,40 +1,75 @@
-<div class="container header__con">
-  <div class="header">
+<header class="header">
+  <div class="container header__con">
     <svg class="header__logo" width="199" height="50">
       <use href="./images/sprite.svg#icon-logo"></use>
     </svg>
-    <!-- <nav class="header__nav"></nav> -->
-    <button
-      type="button"
-      width="20"
-      height="12"
-      class="header__menu-btn"
-      data-menu-button
-    >
-      <svg
-        width="20"
-        height="12"
-        class="header__menu-btn--icon"
-        aria-label="Переключатель мобильного меню"
+    <nav class="header__nav">
+      <ul class="header__nav--list">
+        <li class="header__nav--item">
+          <a class="header__nav--link" href="">Home</a>
+        </li>
+        <li class="header__nav--item">
+          <a class="header__nav--link" href="">About us</a>
+        </li>
+        <li class="header__nav--item">
+          <a class="header__nav--link" href="">How it’s made?</a>
+        </li>
+        <li class="header__nav--item">
+          <a class="header__nav--link" href="">Our products</a>
+        </li>
+        <li class="header__nav--item">
+          <a class="header__nav--link" href="">Contact</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="tab__btns">
+      <button
+        type="button"
+        width="30"
+        height="30"
+        class="header__menu-btn"
+        data-menu-button
       >
-        <use class="icon_menu" href="./images/sprite.svg#icon-Burger"></use>
-        <use
-          class="icon_cross"
-          href="./images/sprite.svg#icon-Burger-close"
-        ></use>
-      </svg>
-    </button>
+        <svg
+          width="24"
+          height="14"
+          class="header__menu-btn--icon"
+          aria-label="Переключатель мобильного меню"
+        >
+          <use class="icon_menu" href="./images/sprite.svg#icon-Burger"></use>
+          <use
+            class="icon_cross"
+            href="./images/sprite.svg#icon-Burger-close"
+          ></use>
+        </svg>
+      </button>
+      <button type="button" class="header__modal-btn">
+        Buy now
+        <svg class="mob_menu__modal-btn--icon" width="5.26" height="8">
+          <use href="./images/sprite.svg#icon-button-vector1"></use>
+        </svg>
+      </button>
+    </div>
   </div>
   <div class="mob_menu" data-menu>
-    <button type="button" class="mob_menu__btn">Buy now</button>
+    <div class="mob_menu--btn-cont">
+      <button type="button" class="mob_menu__modal-btn">
+        Buy now
+        <svg class="mob_menu__modal-btn--icon" width="5.26" height="8">
+          <use href="./images/sprite.svg#icon-button-vector1"></use>
+        </svg>
+      </button>
+    </div>
     <ul class="mob_menu__list">
-      <li class="mob_menu__item"><p class="mob_menu__text">Home</p></li>
-      <li class="mob_menu__item"><p class="mob_menu__text">About us</p></li>
+      <li class="mob_menu__item"><a class="mob_menu__text">Home</a></li>
+      <li class="mob_menu__item"><a class="mob_menu__text">About us</a></li>
       <li class="mob_menu__item">
-        <p class="mob_menu__text">How it’s made?</p>
+        <a class="mob_menu__text">How it’s made?</a>
       </li>
-      <li class="mob_menu__item"><p class="mob_menu__text">Our products</p></li>
-      <li class="mob_menu__item"><p class="mob_menu__text">Contact</p></li>
+      <li class="mob_menu__item">
+        <a class="mob_menu__text">Our products</a>
+      </li>
+      <li class="mob_menu__item"><a class="mob_menu__text">Contact</a></li>
     </ul>
   </div>
-</div>
+</header>
