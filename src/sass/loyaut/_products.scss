@@ -22,6 +22,11 @@
     margin-bottom: 18px;
     @include font(null, 26px, 1.15, null);
   }
+
+  @include desktop {
+    margin-bottom: 16px;
+    @include font(null, 30px, 1.13, null);
+  }
 }
 
 .products__title {
@@ -36,6 +41,10 @@
     margin-bottom: 20px;
     @include font(null, 48px, 1.4, 0.04em);
   }
+
+  @include desktop {
+    @include font(null, 56px, 1.17, 0.06em);
+  }
 }
 
 .products-list {
@@ -47,6 +56,10 @@
 
   @include tablet {
     gap: 16px;
+  }
+
+  @include desktop {
+    gap: 32px;
   }
 }
 
@@ -64,7 +77,10 @@
   @include tablet {
     padding-top: 118px;
   }
+
   @include desktop {
+    padding-top: 165px;
+    padding-bottom: 60px;
     margin-top: 261px;
   }
 }
@@ -95,6 +111,12 @@
     height: 224px;
     top: -138px;
   }
+
+  @include desktop {
+    width: 368px;
+    height: 394px;
+    top: -261px;
+  }
 }
 
 .icon--pink::before {
@@ -107,6 +129,13 @@
     background-image: url(../images/products-icon1-tab.png);
     @include retina {
       background-image: url(../images/products-icon1-tab-2x.png);
+    }
+  }
+
+  @include desktop {
+    background-image: url(../images/products-icon1-desc.png);
+    @include retina {
+      background-image: url(../images/products-icon1-desc-2x.png);
     }
   }
 }
@@ -123,6 +152,13 @@
       background-image: url(../images/products-icon2-tab-2x.png);
     }
   }
+
+  @include desktop {
+    background-image: url(../images/products-icon2-desc.png);
+    @include retina {
+      background-image: url(../images/products-icon2-desc-2x.png);
+    }
+  }
 }
 
 .icon--green::before {
@@ -137,6 +173,13 @@
       background-image: url(../images/products-icon3-tab-2x.png);
     }
   }
+
+  @include desktop {
+    background-image: url(../images/products-icon3-desc.png);
+    @include retina {
+      background-image: url(../images/products-icon3-desc-2x.png);
+    }
+  }
 }
 
 .products-list__title {
@@ -146,6 +189,10 @@
   text-transform: uppercase;
   color: var(--white-background-color);
   position: relative;
+
+  @include desktop {
+    @include font(null, 30px, 1.13, 0.04em);
+  }
 }
 
 .products-list__title::after {
@@ -169,6 +216,13 @@
       background-image: url(../images/ellips-tab-2x.png);
     }
   }
+
+  @include desktop {
+    background-image: url(../images/ellips-desc.png);
+    @include retina {
+      background-image: url(../images/ellips-desc-2x.png);
+    }
+  }
 }
 
 .products-list__text {
@@ -185,6 +239,13 @@
     padding-left: 32px;
     padding-right: 32px;
   }
+
+  @include desktop {
+    padding-left: 63px;
+    padding-right: 63px;
+    margin-bottom: 60px;
+    @include font(700, 16px, 1.76, 0.04em);
+  }
 }
 
 .products-btn {
@@ -194,20 +255,32 @@
   border: none;
   border-radius: 50%;
   background-color: var(--white-background-color);
-
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
 }
 
-.products-btn::before {
+.products-btn::after {
+  content: '';
+  color: var(--white-background-color);
+  padding: 40px 30px;
+  @include font(null, 20px, 1.15, 0.04em);
   width: 280px;
-  height: 280px;
-  background-color: blueviolet;
-
-  transition: background-color;
+  height: 260px;
+  z-index: -1;
+  position: absolute;
+  bottom: 40px;
+  left: -120px;
+  border-radius: 20px;
+  background: transparent;
+  transition: background 300ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.products-btn:hover::before {
-  background-color: chartreuse;
+.products-btn--pink::after {
+  content: ' We have 30 types of ice cream. Portions: Small, Middle, Big. ';
+}
+
+.products-btn--pink:hover::after {
+  background: var(--pink-background-color);
+  z-index: 1;
 }
 
 .products-btn__icon {
