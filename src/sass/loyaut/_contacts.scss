@@ -203,8 +203,8 @@
   border-style: none;
   border-radius: 22px;
   margin-bottom: 10px;
-  transform: scale(1.1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  // transform: scale(1.1);
+  // transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   @include tablet {
     width: 192px;
     margin-bottom: 40px;
@@ -212,7 +212,7 @@
   }
   @include desktop {
     width: 198px;
-    margin-bottom: 120px;
+    // margin-bottom: 120px;
     margin-right: 12px;
   }
 }
@@ -234,17 +234,17 @@
   }
   @include desktop {
     width: 168px;
-    margin-bottom: 120px;
+    // margin-bottom: 120px;
   }
 }
-.contacts-btn_locations:focus,
-.contacts-btn_locations:hover {
-  transform: scale(1.1);
-}
-.contacts-btn_franchise:focus,
-.contacts-btn_franchise:hover {
-  transform: scale(1.1);
-}
+// .contacts-btn_locations:focus,
+// .contacts-btn_locations:hover {
+//   transform: scale(1.1);
+// }
+// .contacts-btn_franchise:focus,
+// .contacts-btn_franchise:hover {
+//   transform: scale(1.1);
+// }
 .btn__icon {
   margin-left: 8px;
   width: 4px;
