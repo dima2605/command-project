@@ -3,7 +3,7 @@
   padding-top: 60px;
   padding-bottom: 60px;
 
-  font-family: 'Titan One', sans-serif;
+  font-family: 'Titan One';
 }
 
 .products__container {
@@ -22,11 +22,6 @@
     margin-bottom: 18px;
     @include font(null, 26px, 1.15, null);
   }
-
-  @include desktop {
-    margin-bottom: 16px;
-    @include font(null, 30px, 1.13, null);
-  }
 }
 
 .products__title {
@@ -41,10 +36,6 @@
     margin-bottom: 20px;
     @include font(null, 48px, 1.4, 0.04em);
   }
-
-  @include desktop {
-    @include font(null, 56px, 1.17, 0.06em);
-  }
 }
 
 .products-list {
@@ -56,10 +47,6 @@
 
   @include tablet {
     gap: 16px;
-  }
-
-  @include desktop {
-    gap: 32px;
   }
 }
 
@@ -77,16 +64,11 @@
   @include tablet {
     padding-top: 118px;
   }
-
-  @include desktop {
-    padding-top: 165px;
-    padding-bottom: 60px;
-    margin-top: 261px;
-  }
 }
 
 .products-list__item--pink {
   background: var(--pink-background-color);
+  margin-top: 140px;
 }
 
 .products-list__item--brown {
@@ -111,12 +93,6 @@
     height: 224px;
     top: -138px;
   }
-
-  @include desktop {
-    width: 368px;
-    height: 394px;
-    top: -261px;
-  }
 }
 
 .icon--pink::before {
@@ -129,13 +105,6 @@
     background-image: url(../images/products-icon1-tab.png);
     @include retina {
       background-image: url(../images/products-icon1-tab-2x.png);
-    }
-  }
-
-  @include desktop {
-    background-image: url(../images/products-icon1-desc.png);
-    @include retina {
-      background-image: url(../images/products-icon1-desc-2x.png);
     }
   }
 }
@@ -152,13 +121,6 @@
       background-image: url(../images/products-icon2-tab-2x.png);
     }
   }
-
-  @include desktop {
-    background-image: url(../images/products-icon2-desc.png);
-    @include retina {
-      background-image: url(../images/products-icon2-desc-2x.png);
-    }
-  }
 }
 
 .icon--green::before {
@@ -173,26 +135,16 @@
       background-image: url(../images/products-icon3-tab-2x.png);
     }
   }
-
-  @include desktop {
-    background-image: url(../images/products-icon3-desc.png);
-    @include retina {
-      background-image: url(../images/products-icon3-desc-2x.png);
-    }
-  }
 }
 
 .products-list__title {
   margin-bottom: 70px;
 
   @include font(null, 20px, 1.15, 0.04em);
+  line-height: 1.15;
   text-transform: uppercase;
   color: var(--white-background-color);
   position: relative;
-
-  @include desktop {
-    @include font(null, 30px, 1.13, 0.04em);
-  }
 }
 
 .products-list__title::after {
@@ -205,7 +157,6 @@
   bottom: -38px;
   left: 50%;
   transform: translateX(-50%);
-  background-size: contain;
   @include retina {
     background-image: url(../images/ellips-mob-2x.png);
   }
@@ -216,13 +167,6 @@
       background-image: url(../images/ellips-tab-2x.png);
     }
   }
-
-  @include desktop {
-    background-image: url(../images/ellips-desc.png);
-    @include retina {
-      background-image: url(../images/ellips-desc-2x.png);
-    }
-  }
 }
 
 .products-list__text {
@@ -230,7 +174,7 @@
   padding-left: 40px;
   padding-right: 40px;
 
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'DM Sans';
   @include font(700, 14px, 1.52, 0.04em);
   text-align: center;
   color: var(--white-background-color);
@@ -238,13 +182,6 @@
   @include tablet {
     padding-left: 32px;
     padding-right: 32px;
-  }
-
-  @include desktop {
-    padding-left: 63px;
-    padding-right: 63px;
-    margin-bottom: 60px;
-    @include font(700, 16px, 1.76, 0.04em);
   }
 }
 

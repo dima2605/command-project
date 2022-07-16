@@ -8,15 +8,15 @@
   height: 66px;
   display: flex;
   justify-content: space-between;
-  @media screen and (min-width: 480px) {
-    width: 460px;
+  @media screen and (min-width: 320px) {
+    max-width: 480px;
   }
   @include tablet {
-    width: 768px;
+    max-width: 768px;
     height: 92px;
   }
   @include desktop {
-    width: 1200px;
+    max-width: 1200px;
   }
 }
 
@@ -57,6 +57,7 @@
   @include tablet {
     margin-top: 46px;
     margin-right: 32px;
+    margin-left: auto;
   }
   @media screen and(min-width:1200px) {
     display: none;
@@ -78,7 +79,7 @@
 }
 
 .header__modal-btn {
-  width: 209px;
+  width: 160px;
   height: 44px;
   background-color: #ffffff;
   font-weight: 700;
@@ -133,10 +134,6 @@
 
 .mob_menu {
   display: none;
-  &.is-open {
-    display: flex;
-    flex-direction: column;
-  }
   width: 250px;
   height: auto;
   position: fixed;
@@ -145,8 +142,23 @@
   background-color: #e17992;
   height: 100vh;
   z-index: 1;
+  transform: translateX(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   @include tablet {
     width: 254px;
+  }
+  &.is-open {
+    display: flex;
+    flex-direction: column;
+    transform: translateX(0%);
+  }
+}
+
+.mob_menu--btn-cont {
+  padding-top: 60px;
+  padding-left: 20px;
+  @include tablet {
+    padding-left: 32px;
   }
 }
 
@@ -160,13 +172,18 @@
   color: #d41443;
   border: none;
   border-radius: 22px;
-  margin-top: 60px;
   margin-bottom: 32px;
-  margin-left: 20px;
+  @include tablet {
+    width: 186px;
+  }
   &:hover,
   &:focus {
     background-color: #ecebeb;
   }
+}
+
+.mob_menu__modal-btn--icon {
+  margin-left: 16px;
 }
 
 .mob_menu__item {
