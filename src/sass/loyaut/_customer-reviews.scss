@@ -32,6 +32,7 @@
 .linear-gradient {
     height: 100%;
     margin: 0 auto;
+    z-index: 1;
 
     width: 180px;
     background-image: repeating-linear-gradient(
@@ -66,7 +67,7 @@
       var(--linear-gradient-color) 261px,
       var(--review-background-color) 261px,
       var(--review-background-color) 291px,
-      var(--linear-gradient-color) 291px
+      var(--linear-gradient-color) 291px,
       var(--linear-gradient-color) 292px
     );
 
