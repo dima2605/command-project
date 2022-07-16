@@ -3,7 +3,7 @@
   padding-top: 60px;
   padding-bottom: 60px;
 
-  font-family: 'Titan One';
+  font-family: 'Titan One', sans-serif;
 }
 
 .products__container {
@@ -141,7 +141,6 @@
   margin-bottom: 70px;
 
   @include font(null, 20px, 1.15, 0.04em);
-  line-height: 1.15;
   text-transform: uppercase;
   color: var(--white-background-color);
   position: relative;
@@ -157,6 +156,7 @@
   bottom: -38px;
   left: 50%;
   transform: translateX(-50%);
+  background-size: contain;
   @include retina {
     background-image: url(../images/ellips-mob-2x.png);
   }
@@ -174,7 +174,7 @@
   padding-left: 40px;
   padding-right: 40px;
 
-  font-family: 'DM Sans';
+  font-family: 'DM Sans', sans-serif;
   @include font(700, 14px, 1.52, 0.04em);
   text-align: center;
   color: var(--white-background-color);
