@@ -21,7 +21,11 @@
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et. dolore magna aliqua facilisis.
         </p>
-        <button type="button" class="products-btn products-btn--brown">
+        <button
+          type="button"
+          class="products-btn products-btn--brown"
+          data-modal-open
+        >
           <svg class="products-btn__icon" width="40" height="40">
             <use href="./images/sprite.svg#icon-button-vector1"></use>
           </svg>
@@ -33,12 +37,59 @@
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et. dolore magna aliqua facilisis.
         </p>
-        <button type="button" class="products-btn products-btn--green">
+        <button
+          type="button"
+          class="products-btn products-btn--green"
+          data-modal-open2
+        >
           <svg class="products-btn__icon" width="40" height="40">
             <use href="./images/sprite.svg#icon-button-vector1"></use>
           </svg>
         </button>
       </li>
     </ul>
+  </div>
+  <!----------------------------Backdrop-1-------------------------->
+  <div
+    class="products-backdrop products-backdrop--brown is-hidden no-scroll"
+    data-modal
+  >
+    <!-----------------------Modal-window-1---------------------------->
+    <div class="products-modal products-modal--brown no-scroll">
+      <button
+        type="button"
+        class="products-modal__btn-close products-modal__btn-close--brown"
+        data-modal-close
+      >
+        X
+      </button>
+      <h2 class="products-modal__title">ice coffee</h2>
+      <p class="products-modal__text">
+        Iced coffee is a coffee beverage served cold. It may be prepared either
+        by brewing coffee normally (i.e. carafe, French press, etc.) and then
+        serving it over ice or in cold milk, or by brewing the coffee cold.
+        Contain 100% Arabika.
+      </p>
+    </div>
+  </div>
+  <!----------------------------Backdrop-2-------------------------->
+  <div class="products-backdrop products-backdrop--green is-hidden" data-modal2>
+    <!-----------------------Modal-window-2--------------------------->
+    <div class="products-modal products-modal--green">
+      <button
+        type="button"
+        class="products-modal__btn-close products-modal__btn-close--green"
+        data-modal-close2
+      >
+        X
+      </button>
+      <h2 class="products-modal__title">milkshakes</h2>
+      <p class="products-modal__text">
+        A milkshake (sometimes simply called a shake) is a sweet beverage made
+        by blending milk, ice cream, and flavorings or sweeteners such as
+        butterscotch, caramel sauce, chocolate syrup, fruit syrup, or whole
+        fruit into a thick, sweet, cold mixture.
+      </p>
+    </div>
   </div>
 </section>
