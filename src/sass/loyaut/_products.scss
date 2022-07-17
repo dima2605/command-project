@@ -262,54 +262,12 @@
   position: relative;
 }
 
-// .products-btn--pink::after {
-//   content: '';
-//   color: var(--white-background-color);
-//   padding: 40px 30px;
-//   @include font(null, 20px, 1.15, 0.04em);
-//   width: 90vw;
-//   height: 228px;
-//   position: absolute;
-//   bottom: 40px;
-
-//   @media screen and (min-width: 473px) {
-//     height: 160px;
-//   }
-
-//   @media screen and (min-width: 627px) {
-//     height: 140px;
-//   }
-
-//   @include tablet {
-//     height: 200px;
-//     width: 28vw;
-//   }
-
-//   @media screen and (min-width: 1094px) {
-//     height: 135px;
-//   }
-
-//   @include desktop {
-//     height: 220px;
-//   }
-
-//   border-radius: 20px;
-//   background: transparent;
-//   transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1),
-//     content 1000ms cubic-bezier(0.4, 0, 0.2, 1);
-// }
-
-// .products-btn--pink:hover::after,
-// .products-btn--pink:hover::after {
-//   background: var(--pink-background-color);
-//   content: 'We have 30 types of ice cream. Portions: Small, Middle, Big.';
-// }
-
 .products-btn__icon {
   width: 10px;
   height: 10px;
 }
 
+// ---------------------------Backdrop---------------------------------
 .products-backdrop {
   width: 100%;
   height: 100%;
@@ -326,32 +284,27 @@
 }
 
 .products-backdrop--pink {
-  background-color: rgb(230, 82, 112, 0.3);
+  background-color: rgb(230, 82, 112, 0.2);
 }
 
 .products-backdrop--brown {
-  background-color: rgba(244, 153, 96, 0.3);
+  background-color: rgba(244, 153, 96, 0.2);
 }
 
 .products-backdrop--green {
-  background-color: rgba(100, 228, 121, 0.3);
+  background-color: rgba(100, 228, 121, 0.2);
 }
 
+// ----------------------------Modal-window--------------------------------------
 .products-modal {
   width: 80vw;
   min-height: 60vh;
   border-radius: 30px 0px 30px 0px;
-  padding-top: 40px;
-  box-shadow: 5px 10px 8px rgba($color: #c49840, $alpha: 1);
-  @media screen and (min-width: 480px) {
-    padding-top: 60px;
-  }
+  padding-top: 10vh;
+  box-shadow: 5px 10px 8px rgba($color: #4b463c, $alpha: 1);
   @include tablet {
     width: 60vw;
     min-height: 50vh;
-  }
-  @include desktop {
-    padding-top: 80px;
   }
   position: absolute;
   top: 50%;
@@ -360,10 +313,17 @@
   transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-// .products-modal--pink {
-//   background-color: var(--pink-background-color);
-//   border: thick double var(--accent-color);
-// }
+.products-modal__wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.products-modal--pink {
+  background-color: var(--second-accent-color);
+  border: thick double rgba(142, 64, 80);
+}
 
 .products-modal--brown {
   background-color: var(--brown-background-color);
@@ -391,9 +351,10 @@
   }
 }
 
-// .products-modal__btn-close--pink {
-//   border: 2px solid var(--accent-color);
-// }
+.products-modal__btn-close--pink {
+  border: 2px solid rgba(142, 64, 80);
+  color: rgba(142, 64, 80);
+}
 
 .products-modal__btn-close--brown {
   border: 2px solid rgba(107, 43, 3);
@@ -407,6 +368,9 @@
 
 .products-modal__title {
   margin-bottom: 20px;
+  @media screen and (min-width: 1500px) {
+    margin-bottom: 50px;
+  }
   text-align: center;
   font-family: 'Titan One', sans-serif;
 }
