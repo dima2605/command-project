@@ -1,0 +1,178 @@
+.about {
+  background-color: var(--milk-background-color);
+
+  padding-top: 60px;
+  padding-bottom: 40px;
+  @include tablet {
+    padding-bottom: 60px;
+  }
+  @include desktop {
+    padding-bottom: 120px;
+  }
+}
+
+.about-top__text {
+  font-family: 'Titan One', cursive;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--second-accent-color);
+
+  margin-bottom: 15px;
+
+  @include tablet {
+    @include font(null, 26px, 1.15, null);
+  }
+
+  @include desktop {
+    @include font(null, 30px, 1.13, null);
+  }
+}
+
+.about-top__title {
+  font-family: 'Titan One', cursive;
+  @include font(400, 34px, 1.15, 0.04em);
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--accent-color);
+
+  margin-bottom: 32px;
+
+  @include tablet {
+    margin-bottom: 40px;
+    @include font(400, 48px, 1.14, 0.04em);
+  }
+
+  @include desktop {
+    margin-bottom: 60px;
+    @include font(400, 58px, 0.96, 0.04em);
+  }
+}
+
+.about-png__cow {
+  width: 280px;
+  height: 279px;
+
+  @include tablet {
+    width: 336px;
+    height: 335px;
+  }
+
+  @include desktop {
+    width: 501px;
+    height: 501px;
+  }
+}
+
+.background-image {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include desktop {
+    background-image: url(../images/milk-desc.png);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.about-content {
+  background-image: url(../images/milk-mob.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+  @include tablet {
+    background-image: none;
+  }
+}
+
+.about-common {
+  margin-left: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  width: 100%;
+
+  @include tablet {
+    margin-left: 32px;
+    background-image: none;
+    width: auto;
+  }
+
+  @include desktop {
+    margin-left: 99px;
+    padding-top: 90px;
+    padding-bottom: 81px;
+  }
+}
+
+.about-content__top-text {
+  @include font(500, 12px, 1.62, null);
+  color: var(--black-text-color);
+  width: 220px;
+
+  margin-bottom: 35px;
+
+  @include tablet {
+    @include font(500, 14px, 1.76, null);
+    width: 334px;
+  }
+
+  @include desktop {
+    @include font(500, 16px, 1.76, 0.04em);
+    width: 463px;
+  }
+}
+
+.about-content__text {
+  @include font(500, 12px, 1.62, null);
+
+  color: var(--grey-text-color);
+
+  margin-bottom: 15px;
+
+  width: 220px;
+
+  @include tablet {
+    @include font(500, 14px, 1.76, 0.04em);
+    width: 334px;
+    margin-bottom: 40px;
+  }
+
+  @include desktop {
+    @include font(500, 14px, 1.94, 0.04em);
+    width: 463px;
+    margin-bottom: 44px;
+  }
+}
+
+.about-content__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 176px;
+  height: 44px;
+  background: var(--white-background-color);
+  border-radius: 22px;
+  border: none;
+  cursor: pointer;
+
+  color: var(--accent-color);
+  @include font(700, 14px, 1.29, null);
+  text-align: center;
+
+  //   &:hover .vector,
+  //   &:focus .vector {
+  //     background: var(--accent-color);
+  //     fill: var(--white-color);
+  //   }
+
+  @include tablet {
+    @include font(700, 16px, 1.31, null);
+  }
+}
+
+.vector {
+  display: flex;
+  align-items: baseline;
+  margin-left: 14px;
+  fill: currentColor;
+}
