@@ -1,5 +1,5 @@
 .footer {
-  width: 100%;
+  // width: 100%;
   padding-top: 40px;
   @include desktop {
     padding-top: 120px;
@@ -23,7 +23,7 @@
 }
 
 .footer__wrap {
-  width: 100%;
+  // width: 100%;
   margin-bottom: 40px;
 
   @include tablet {
@@ -135,6 +135,7 @@
 }
 
 .footer__copy {
+  // max-width: 1200px;
   padding-top: 16px;
   padding-bottom: 3px;
   border-top: 1px solid #e1e1e1;
