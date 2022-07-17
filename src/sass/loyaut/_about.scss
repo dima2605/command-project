@@ -1,6 +1,5 @@
 .about {
   background-color: var(--milk-background-color);
-
   padding-top: 60px;
   padding-bottom: 40px;
   @include tablet {
@@ -175,4 +174,72 @@
   align-items: baseline;
   margin-left: 14px;
   fill: currentColor;
+}
+
+
+
+.backdrop {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(160, 84, 84, 0.2);
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.modal {
+    padding: 60px;
+    background-color: var(--milk-background-color);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: inset 0 0 10px 5px var(--accent-color);
+    border-radius: 4px;
+
+    background-image: url(../images/milk-mob.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    width: 300px;
+    height: 400px;
+
+    @include tablet {
+        min-width: 450px;
+        min-height: 609px;
+    }
+
+    @include desktop {
+        min-width: 500px;
+        min-height: 600px;
+    }
+}
+
+.modal__close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 0;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    background: var(--accent-color);
+    border: none;
+    border-radius: 50%;
+    justify-content: center;
+
+    &:hover,
+    &:focus {
+        fill: var(--accent-color);
+    }
+}
+
+
+.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
 }
