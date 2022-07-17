@@ -321,8 +321,8 @@
 }
 
 .products-modal--pink {
-  background-color: var(--second-accent-color);
-  border: thick double rgba(142, 64, 80);
+  background-color: rgb(222, 176, 185);
+  border: thick double rgb(157, 84, 98);
 }
 
 .products-modal--brown {
@@ -379,4 +379,8 @@
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
+}
+
+.no-scroll {
+  overflow: hidden;
 }
