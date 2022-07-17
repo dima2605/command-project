@@ -18,11 +18,7 @@
   }
 
   @include desktop {
-    // max-width: 474px;
     max-width: 477px;
-    // margin-right: auto;
-    // margin-top: 120px;
-    // margin-bottom: 60px;
   }
 }
 
@@ -31,7 +27,6 @@
   margin-bottom: 40px;
 
   @include tablet {
-    // padding: 0 16px;
     display: flex;
     justify-content: space-between;
   }
@@ -41,7 +36,7 @@
 }
 
 .footer__text {
-  font-family: 'Titan One';
+  font-family: 'Titan One', cursive;
   @include font(400, 18px, 1.16, null);
   text-transform: uppercase;
   color: var(--second-accent-color);
@@ -59,7 +54,7 @@
 }
 
 .footer__span {
-  font-family: 'Titan One';
+  font-family: 'Titan One', cursive;
   @include font(400, 34px, 1.14, 0.04em);
   text-transform: uppercase;
   color: var(--accent-color);
@@ -79,10 +74,6 @@
     flex-direction: column;
     justify-content: center;
   }
-
-//   @include desktop {
-//     margin-top: 120px;
-//   }
 }
 
 .footer__soc {
@@ -122,10 +113,6 @@
 .footer__contacts {
   display: flex;
   justify-content: flex-end;
-
-  // @media screen and (max-width: 767px) {
-  //     margin-bottom: 40px;
-  // }
 }
 
 .footer__contacts-text {

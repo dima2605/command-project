@@ -1,3 +1,9 @@
+.reviews{
+  padding-top: 60px;
+  @include desktop{
+    padding-top: 120px;
+  }
+}
 .reviews__list {
   display: flex;
   flex-direction: column;

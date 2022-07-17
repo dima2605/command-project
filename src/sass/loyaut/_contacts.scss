@@ -21,6 +21,14 @@
       var(--milk-background-color) 0
     );
   }
+  padding-top: 60px;
+
+  @include tablet {
+    padding-top: 80px;
+  }
+  @include desktop {
+    padding-top: 120px;
+  }
 }
 
 .contacts-list {
@@ -63,7 +71,6 @@
   justify-content: center;
   height: 16px;
   border-radius: 4px;
-  font-family: 'DM Sans';
   @include font(500, 12px, 1.84, 0.04em);
   color: var(--white-background-color);
   margin-bottom: 20px;
@@ -89,7 +96,6 @@
   }
 }
 .contacts-list__city {
-  font-family: 'DM Sans';
   @include font(500, 12px, 1.84, 0.04em);
   color: var(--black-text-color);
   margin-bottom: 8px;
@@ -103,7 +109,6 @@
   }
 }
 .contacts-list__descp {
-  font-family: 'DM Sans';
   @include font(500, 12px, 1.5, null);
   color: var(--grey-text-color);
   margin-bottom: 24px;
@@ -130,7 +135,6 @@
   }
 }
 .schedule__day {
-  font-family: 'DM Sans';
   @include font(500, 12px, 1.83, null);
   color: var(--black-text-color);
   @include tablet {
@@ -141,7 +145,6 @@
   }
 }
 .schedule__time {
-  font-family: 'DM Sans';
   @include font(500, 12px, 1.83, null);
   color: var(--second-accent-color);
   @include tablet {
@@ -162,7 +165,6 @@
 }
 
 .contacts-link__path {
-  font-family: 'DM Sans';
   @include font(500, 12px, 1.5, null);
   color: inherit;
   @include tablet {
@@ -196,7 +198,6 @@
   height: 44px;
   padding-top: 10px;
   padding-bottom: 10px;
-  font-family: 'DM Sans';
   @include font(700, 16px, 1.32, null);
   color: var(--white-background-color);
   background-color: var(--accent-color);
@@ -221,7 +222,6 @@
   height: 44px;
   padding-top: 10px;
   padding-bottom: 10px;
-  font-family: 'DM Sans';
   @include font(700, 16px, 1.32, null);
   color: var(--accent-color);
   background-color: var(--white-background-color);
