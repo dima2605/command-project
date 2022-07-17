@@ -1,0 +1,185 @@
+.advantages {
+    width: 100%;
+    padding-top: 40px;
+    padding-bottom: 60px;
+    background-color: var(--milk-background-color);
+
+    @include tablet {
+        padding-top: 60px;
+    }
+
+    @include desktop {
+        padding-bottom: 120px;
+    }
+}
+
+.advantages__container {
+    @include tablet {
+        padding-left: 23px;
+    }
+
+    @include desktop {
+        padding-left: 16px;
+    }
+}
+
+.advantages__list {
+    @include tablet {
+        display: flex;
+        gap: 4px;
+    }
+
+    @include desktop {
+        gap: 115px;
+    }
+}
+
+.advantages__item {
+    @media screen and (max-width: 767px) {
+        &:not(:last-child) {
+            margin-bottom: 32px;
+        }
+    }
+}
+
+.advantages__item-milk {
+    &::before {
+        content: '';
+        display: block;
+        width: 33px;
+        height: 50px;
+        background-image: url("../images/advantages1-mob.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-bottom: 16px;
+
+        @include retina {
+            background-image: url("../images/advantages1-mob-2x.png");
+        }
+
+        @include tablet {
+            width: 50px;
+            margin-bottom: 36px;
+            background-image: url("../images/advantages1-tab.png");
+
+            @include retina {
+                background-image: url("../images/advantages1-tab-2x.png");
+            }
+        }
+
+        @include desktop {
+            margin-bottom: 40px;
+            background-image: url("../images/advantages1-desc.png");
+        
+            @include retina {
+                background-image: url("../images/advantages1-desc-2x.png");
+            }
+        }    
+    }
+}
+
+.advantages__item-apple {
+    &::before {
+        content: '';
+        display: block;
+        width: 33px;
+        height: 50px;
+        background-image: url("../images/advantages2-mob.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-bottom: 16px;
+
+        @include retina {
+            background-image: url("../images/advantages2-mob-2x.png");
+        }
+
+        @include tablet {
+            width: 50px;
+            margin-bottom: 36px;
+            background-image: url("../images/advantages2-tab.png");
+
+            @include retina {
+                background-image: url("../images/advantages2-tab-2x.png");
+            }
+        }
+
+        @include desktop {
+            margin-bottom: 40px;
+            background-image: url("../images/advantages2-desc.png");
+        
+            @include retina {
+                background-image: url("../images/advantages2-desc-2x.png");
+            }
+        }    
+    }
+}
+
+.advantages__item-candy {
+    &::before {
+        content: '';
+        display: block;
+        width: 33px;
+        height: 50px;
+        background-image: url("../images/advantages3-mob.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-bottom: 16px;
+
+        @include retina {
+            background-image: url("../images/advantages3-mob-2x.png");
+        }
+
+        @include tablet {
+            width: 50px;
+            margin-bottom: 36px;
+            background-image: url("../images/advantages3-tab.png");
+
+            @include retina {
+                background-image: url("../images/advantages3-tab-2x.png");
+            }
+        }
+
+        @include desktop {
+            margin-bottom: 40px;
+            background-image: url("../images/advantages3-desc.png");
+        
+            @include retina {
+                background-image: url("../images/advantages3-desc-2x.png");
+            }
+        }    
+    }
+}
+
+.advantages__top-text {
+    font-family: 'Titan One';
+    @include font (400, 36px, 1.13, 0.04em);
+    text-transform: uppercase;
+    color: var(--accent-color);
+    margin-bottom: 4px;
+
+    @include tablet {
+        @include font (null, 48px, 1.14, null);
+        margin-bottom: 13px;
+    }
+
+    @include desktop {
+        @include font (null, 58px, 1.13, null);
+        margin-bottom: 16px;
+    }
+}
+
+.advantages__text {
+    max-width: 230px;
+    @include font (700, 12px, 1.66, null);
+    color: var(--black-text-color);
+
+    @include tablet {
+        max-width: 180px;
+        @include font (null, 14px, 1.71, null);
+    }
+
+    @include desktop {
+        max-width: 288px;
+        @include font (null, 16px, 1.75, 0.02em);
+    }
+}
