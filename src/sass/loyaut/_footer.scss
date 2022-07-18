@@ -1,0 +1,158 @@
+.footer {
+  // width: 100%;
+  padding-top: 40px;
+  @include desktop {
+    padding-top: 120px;
+  }
+  background-color: var(--milk-background-color);
+}
+
+.footer__container {
+  max-width: 234px;
+  margin-bottom: 40px;
+
+  @include tablet {
+    max-width: 340px;
+    margin-right: auto;
+    margin-bottom: 0;
+  }
+
+  @include desktop {
+    max-width: 477px;
+  }
+}
+
+.footer__wrap {
+  // width: 100%;
+  margin-bottom: 40px;
+
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+  }
+  @include desktop {
+    margin-bottom: 60px;
+  }
+}
+
+.footer__text {
+  font-family: 'Titan One', cursive;
+  @include font(400, 18px, 1.16, null);
+  text-transform: uppercase;
+  color: var(--second-accent-color);
+  margin-bottom: 16px;
+
+  @include tablet {
+    @include font(null, 26px, 1.15, 0.04em);
+    margin-bottom: 12px;
+  }
+
+  @include desktop {
+    @include font(null, 30px, 1.13, null);
+    margin-bottom: 16px;
+  }
+}
+
+.footer__span {
+  font-family: 'Titan One', cursive;
+  @include font(400, 34px, 1.14, 0.04em);
+  text-transform: uppercase;
+  color: var(--accent-color);
+
+  @include tablet {
+    @include font(null, 48px, 1.14, 0.06em);
+  }
+
+  @include desktop {
+    @include font(null, 58px, 1.13, null);
+  }
+}
+
+.footer__wrap-link {
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.footer__soc {
+  margin-bottom: 40px;
+}
+
+.footer__soc-list {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 24px;
+
+  @include tablet {
+    gap: 30px;
+  }
+}
+
+.footer__soc-item:hover .footer__soc-icon,
+.footer__soc-item:focus .footer__soc-icon {
+  fill: var(--accent-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer__soc-link {
+  display: flex;
+}
+
+.footer__soc-icon {
+  fill: #fea5bb;
+
+  @include tablet {
+    width: 34px;
+    height: 34px;
+  }
+}
+
+.footer__contacts {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.footer__contacts-text {
+  @include font(700, 12px, 1.83, null);
+  margin-right: 4px;
+  color: var(--black-text-color);
+
+  @include tablet {
+    @include font(null, 14px, 1.85, null);
+  }
+}
+
+.footer__contacts-link {
+  @include font(700, 12px, 1.83, null);
+  color: var(--accent-color);
+
+  @include tablet {
+    @include font(null, 14px, 1.85, null);
+  }
+}
+
+.footer__copy {
+  // max-width: 1200px;
+  padding-top: 16px;
+  padding-bottom: 3px;
+  border-top: 1px solid #e1e1e1;
+
+  @include tablet {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+}
+
+.footer__copy-text {
+  @include font(700, 14px, 1.5, null);
+  text-align: center;
+  color: var(--grey-text-color);
+
+  @media screen and (max-width: 767px) {
+    max-width: 150px;
+    margin: 0 auto;
+  }
+}
