@@ -1,7 +1,7 @@
-<div class="backdrop-header" data-header-modal>
-  <form class="fieldset" autocomplete="on" id="buy">
+<div class="backdrop-cont visually-hidden" header-modal>
+  <form class="order-fieldset" autocomplete="on" id="buy">
     <h2 class="fieldset__title">Your order</h2>
-    <button class="fieldset__close-btn" type="button" data-modal-close>
+    <button class="fieldset__close-btn" type="button" buy-modal-close>
       <svg class="fieldset__close-icon" width="24" height="14">
         <use href="./images/sprite.svg#icon-Burger-close"></use>
       </svg>
@@ -19,7 +19,7 @@
       </div>
       <div class="label-wrap">
         <label class="label-wrap__name" for="tel">Phone</label>
-        <input
+        <inputs
           class="label-wrap__input"
           type="tel"
           name="tel"
@@ -48,28 +48,30 @@
           <p>Size</p>
           <div class="radio-wrap size-wrap">
             <input type="radio" name="size" id="s" />
-            <label for="s" class="label-wrap__name label-radio">Small</label>
+            <label for="s" class="label-wrap__name label-radio"
+              >S<span class="size-wrap__span">mall</span></label
+            >
             <input type="radio" name="size" checked="checked" id="m" />
-            <label for="m" class="label-wrap__name label-radio">Medium</label>
+            <label for="m" class="label-wrap__name label-radio"
+              >M<span class="size-wrap__span">edium</span></label
+            >
             <input type="radio" name="size" id="l" />
-            <label for="l" class="label-wrap__name label-radio">Large</label>
+            <label for="l" class="label-wrap__name label-radio"
+              >L<span class="size-wrap__span">arge</span></label
+            >
           </div>
         </div>
         <div class="label-wrap product-number">
-        <div class="label-wrap product-wrap__title">
-          <p>How many?</p>
-          <div class="radio-wrap">
-            <input type="radio" name="count" id="1" />
-            <label for="s" class="label-wrap__name label-radio">1</label>
-            <input type="radio" name="count" checked="checked" id="2" />
-            <label for="m" class="label-wrap__name label-radio">2</label>
-            <input type="radio" name="count" id="3" />
-            <label for="l" class="label-wrap__name label-radio">3</label>
-            <input type="radio" name="count" id="4" />
-            <label for="l" class="label-wrap__name label-radio">4</label>
-            <input type="radio" name="count" id="5" />
-            <label for="l" class="label-wrap__name label-radio">5</label>
-          </div>
+          <label class="label-wrap__name label-wrap__name--count" for="count"
+            >How many</label
+          >
+          <input
+            class="label-wrap__input label-wrap-count__input"
+            type="count"
+            name="count"
+            id="count"
+            required
+          />
         </div>
       </div>
     </div>
