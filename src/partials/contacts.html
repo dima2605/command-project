@@ -68,7 +68,11 @@
     </ul>
     <ul class="contacts-btn list">
       <li>
-        <button type="button" class="contacts-btn_locations">
+        <button
+          type="button"
+          class="contacts-btn_locations"
+          data-modal-contacs-loc-open
+        >
           Our Locations
           <svg class="btn__icon1" width="6" height="10">
             <use href="/src/images/sprite.svg#icon-button-vector-con"></use>
@@ -76,7 +80,11 @@
         </button>
       </li>
       <li>
-        <button type="button" class="contacts-btn_franchise">
+        <button
+          type="button"
+          class="contacts-btn_franchise"
+          data-modal-contacs-open
+        >
           Franchise
           <svg class="btn__icon" width="6" height="10">
             <use href="/src/images/sprite.svg#icon-button-vector1"></use>
@@ -84,5 +92,126 @@
         </button>
       </li>
     </ul>
+  </div>
+  <div class="backdrop is-hidden" data-modal-contacs>
+    <div class="modal">
+      <button
+        type="button"
+        class="button-modal-clouse"
+        data-modal-contacs-close
+      >
+        X
+      </button>
+      <p class="modal-title">Leave your details, we will call you back</p>
+      <form>
+        <div class="modal-field">
+          <label for="user-name" class="modal-label">Name</label>
+          <div class="input-wrap">
+            <input
+              type="text"
+              class="modal-input"
+              name="user-name"
+              placeholder=""
+              required
+              id="user-name"
+            />
+          </div>
+        </div>
+        <div class="modal-field">
+          <label for="user-tel" class="modal-label">Phone number</label>
+          <div class="input-wrap">
+            <input
+              type="tel"
+              class="modal-input"
+              name="user-tel"
+              placeholder=""
+              required
+              id="user-tel"
+            />
+          </div>
+        </div>
+        <div class="modal-field">
+          <label for="user-email" class="modal-label">Mail</label>
+          <div class="input-wrap">
+            <input
+              type="email"
+              class="modal-input"
+              name="user-email"
+              placeholder=""
+              required
+              id="user-email"
+            />
+          </div>
+        </div>
+        <div class="modal-field">
+          <label for="user-text" class="modal-label">Comment</label>
+          <textarea
+            name="user-text"
+            id="user-text"
+            class="modal-text"
+            placeholder="Enter text"
+          ></textarea>
+        </div>
+        <div class="modal-field">
+          <input
+            type="checkbox"
+            class="modal-check visually-hidden"
+            name="privacy"
+            value="true"
+            id="privacy"
+          />
+          <label for="privacy" class="checkbox-text">
+            <span class="mailing-list">
+              I agree with the newsletter and accept
+              <a href="" class="link color-contract"
+                >Terms of an agreement</a
+              ></span
+            ></label
+          >
+        </div>
+        <button type="submit" class="button-send">Send</button>
+      </form>
+    </div>
+  </div>
+  <div class="backdrop-location is-hidden" data-modal-contacs-loc>
+    <div class="modal-loc">
+      <button
+        type="button"
+        class="button-modal-clouse"
+        data-modal-contacs-loc-close
+      >
+        X
+      </button>
+      <p class="modal-loc__top-text">Choose your location:</p>
+      <ul class="">
+        <li class="modal-loc__link">
+          <a
+            href="https://goo.gl/maps/8Lobm1j3YGSJRMxu7"
+            class="modal-loc__text"
+            target="_blank"
+            rel="noopener nofollow noreferrer"
+            >Chicago</a
+          >
+        </li>
+        <li class="modal-loc__link">
+          <a
+            href="https://goo.gl/maps/BZHwLprHPpefR6wV9"
+            class="modal-loc__text"
+            target="_blank"
+            rel="noopener nofollow noreferrer"
+            >Los Angeles</a
+          >
+        </li>
+        <li class="modal-loc__link">
+          <a
+            href="https://goo.gl/maps/46RinRjc1G2dgtqSA"
+            class="modal-loc__text"
+            target="_blank"
+            rel="noopener nofollow noreferrer"
+            >New York</a
+          >
+        </li>
+      </ul>
+    </div>
   </div>
 </section>
