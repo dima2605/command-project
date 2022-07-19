@@ -205,7 +205,13 @@
   border-style: none;
   border-radius: 22px;
   margin-bottom: 10px;
-
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    background-color: #ecebeb;
+    color: var(--accent-color);
+  }
   @include tablet {
     width: 192px;
     margin-bottom: 0;
@@ -213,7 +219,6 @@
   }
   @include desktop {
     width: 198px;
-
     margin-right: 12px;
   }
 }
@@ -228,9 +233,11 @@
   background-color: var(--white-background-color);
   border-style: none;
   border-radius: 22px;
-  transform: c;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    background-color: #ecebeb;
+  }
   @include tablet {
     width: 174px;
   }
@@ -260,10 +267,8 @@
 }
 
 .modal {
-  max-width: 450px;
-  width: 100%;
-  max-height: 625px;
-  height: 100%;
+  width: 95vw;
+  height: 60vh;
   overflow: auto;
   background: var(--pink-background-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -278,12 +283,23 @@
   .backdrop.is-hidden & {
     transform: translate(-50%, -50%) scale(0);
   }
+  @include tablet {
+    width: 60vw;
+  }
+  @include desktop {
+    width: 35vw;
+    height: 55vh;
+    padding-top: 60px;
+  }
 }
 .modal-title {
   @include font(500, 16px, 1.32, 0.03em);
   text-align: center;
-  color: var(--title-text-color);
+  color: var(--grey-text-color);
   margin-bottom: 12px;
+  @include desktop {
+    @include font(500, 20px, 1.32, 0.03em);
+  }
 }
 .svg-button-modal {
   fill: var(--logo-black);
@@ -301,17 +317,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  top: 8px;
-  right: 8px;
+  top: 15px;
+  right: 15px;
   color: var(--white-text-color);
   background-color: var(--accent-color);
   border: 1px solid var(--pink-background-color);
   border-radius: 50%;
   cursor: pointer;
-  // &:focus .svg-button-modal,
-  // &:hover .svg-button-modal {
-  //   fill: var(--accent-color);
-  // }
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    background-color: var(--grey-text-color);
+  }
 }
 
 .is-hidden {
@@ -325,10 +342,10 @@
 .modal-input {
   display: block;
   width: 100%;
-  height: 40px;
+  height: 30px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  padding-left: 42px;
+  padding-left: 10px;
   outline: none;
   cursor: pointer;
   transition: border var(--transition);
@@ -351,13 +368,13 @@
 }
 .modal-label {
   @include font(700, 12px, 1.16, 0.01em);
-  color: var(--black-text-color);
+  color: var(--grey-text-color);
   margin-bottom: 4px;
   display: block;
 }
 .modal-text {
   width: 100%;
-  height: 120px;
+  height: 70px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   resize: none;
@@ -372,41 +389,7 @@
   border-bottom: 1px solid var(--accent-color);
   color: var(--accent-color);
 }
-.checkbox-text {
-  @include font(400, 12px, 1.16, null);
-  color: var(--black-text-color);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-bottom: 21px;
-  // @include mq(desk) {
-  //   font-size: 14px;
-  //   line-height: 1.71;
-  // }
-  &::before {
-    content: '';
-    width: 16px;
-    height: 15px;
-    border: 2px solid var(--title-text-color);
-    flex-shrink: 0;
-    // @include mq(desk) {
-    //   flex-shrink: 0;
-    // }
-    border-radius: 2px;
-    margin-right: 8px;
-    .modal-check:checked + & {
-      background-color: white;
 
-      border: 2px solid var(--title-text-color);
-      background-repeat: no-repeat;
-      background-position: center;
-    }
-    .modal-check:hover + &,
-    .modal-check:focus + & {
-      border: 2px solid black;
-    }
-  }
-}
 .button-send {
   cursor: pointer;
   width: 162px;
@@ -418,17 +401,15 @@
   background-color: var(--accent-color);
   border-style: none;
   border-radius: 22px;
-  margin-bottom: 10px;
-  margin-left: 50px;
+  margin: 30px auto 0 auto;
+  display: flex;
+  justify-content: center;
 
   @include tablet {
     width: 192px;
-    margin-bottom: 0;
-    margin-left: 100px;
   }
   @include desktop {
     width: 198px;
-    margin-left: 80px;
   }
 }
 
@@ -449,11 +430,13 @@
   transition: opacity var(--transition), visibility 350ms;
 }
 .modal-loc {
-  max-width: 450px;
-  width: 100%;
-  max-height: 625px;
-  height: 100%;
+  width: 95vw;
+  height: 60vh;
   overflow: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background: var(--pink-background-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -466,6 +449,14 @@
   padding: 40px;
   .backdrop.is-hidden & {
     transform: translate(-50%, -50%) scale(0);
+  }
+  @include tablet {
+    width: 60vw;
+  }
+  @include desktop {
+    width: 45vw;
+    height: 55vh;
+    padding-top: 60px;
   }
 }
 .modal-loc__top-text {
@@ -481,4 +472,8 @@
 }
 .modal-loc__link {
   margin-bottom: 20px;
+  &:hover .modal-loc__text,
+  &:focus .modal-loc__text {
+    color: var(--white-text-color);
+  }
 }
