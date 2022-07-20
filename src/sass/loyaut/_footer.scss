@@ -142,7 +142,11 @@
 
   @include tablet {
     padding-top: 8px;
-    padding-bottom: 8px;
+    padding-bottom: 4px;
+  }
+  @include desktop {
+    padding-top: 7px;
+    padding-bottom: 3px;
   }
 }
 
@@ -156,4 +160,3 @@
     margin: 0 auto;
   }
 }
-
