@@ -178,7 +178,7 @@
 
 
 
-.backdrop {
+.backdrop-about {
     width: 100vw;
     height: 100vh;
     background-color: rgba(160, 84, 84, 0.2);
@@ -187,7 +187,7 @@
     left: 0;
 }
 
-.modal {
+.modal-about {
     padding: 20px 70px;
     background-color: var(--second-accent-color);
     position: absolute;
@@ -343,6 +343,3 @@
         height: 25px;
       }
 }
-
-
-
