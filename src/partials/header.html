@@ -1,8 +1,10 @@
 <header class="header">
   <div class="container header__con">
-    <svg class="header__logo" width="199" height="50">
-      <use href="./images/sprite.svg#icon-logo"></use>
-    </svg>
+    <div class="header__logo">
+      <svg class="header__logo-icon" width="199" height="50">
+        <use href="./images/sprite.svg#icon-logo"></use>
+      </svg>
+    </div>
     <nav class="header__nav">
       <ul class="header__nav--list">
         <li class="header__nav--item">
@@ -99,22 +101,24 @@
           </button>
           <div class="fieldset__wrap">
             <div class="label-wrap">
-              <label class="label-wrap__name" for="name" autofocus>Name</label>
+              <label class="label-wrap__name" for="user-name"
+                ><span>Name</span></label
+              >
               <input
                 class="label-wrap__input"
                 type="text"
-                name="name"
-                id="name"
+                name="user-name"
+                id="user-name"
                 required
               />
             </div>
             <div class="label-wrap">
-              <label class="label-wrap__name" for="tel">Phone</label>
-              <inputs
+              <label class="label-wrap__name" for="user-tel">Phone</label>
+              <input
                 class="label-wrap__input"
                 type="tel"
-                name="tel"
-                id="tel"
+                name="user-tel"
+                id="user-tel"
                 required
               />
             </div>
